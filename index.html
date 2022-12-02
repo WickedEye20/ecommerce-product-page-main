@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div class="mobile_navbar">
+      <ul class="mobile_nav">
+        <div class="menu_close_icon"></div>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <header>
+
+      <nav class="navbar flex_group">
+        <div class="nav_left flex_group">
+          <div class="menu_icon"></div>
+          <div class="logo">
+            <img src="images/logo.svg" alt="Sneakers" />
+          </div>
+          <ul class="left_flex_group flex_group">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="nav_right">
+          <ul class="right_flex_group flex_group">
+            <li id="show_cart">
+              <span id="cart_quantity_indicator">3</span>
+            </li>
+            <li>
+              <img class="avatar" src="images/image-avatar.png" alt="Avatar" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="cart_popup" id="cart_popup">
+        <h4>Cart</h4>
+        <hr />
+        <div class="cart_empty" id="cart_empty">Your cart is empty.</div>
+        <div class="cart_content flex_group" id="cart_1">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <div class="cart_content_name">
+            <div class="product_name">Fall Limited Edition Sneakers</div>
+            <div class="cart_price flex_group">
+              <span class="cart_base_price">$125.00</span>
+              <span>x</span>
+              <span class="cart_quantity">3</span>
+              <span class="cart_total_price">$375.00</span>
+            </div>
+          </div>
+          <div class="delete_carticon" id="cart_remove_1"></div>
+        </div>
+        <button class="add_cart checkout_btn quantity_border" id="checkout_btn">
+          Checkout
+        </button>
+      </div>
+    </header>
+    <section class="product_main flex_group">
+      <div class="product_img_main">
+        <div class="product_img border_radius" id="product_img">
+          <img class="product_main_img"
+            id="img_1"
+            src="images/image-product-1.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img class="product_main_img"
+            id="img_2"
+            src="images/image-product-2.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img class="product_main_img"
+            id="img_3"
+            src="images/image-product-3.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+          <img class="product_main_img"
+            id="img_4"
+            src="images/image-product-4.jpg"
+            alt="Fall Limited Edition Sneakers"
+          />
+        </div>
+        <div class="product_thumbnails flex_group">
+          <div class="thumbnails active border_radius" id="thumbnail1">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Fall Limited Edition Sneakers"
+            />
+          </div>
+          <div class="thumbnails border_radius" id="thumbnail2">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Fall Limited Edition Sneakers"
+            />
+          </div>
+          <div class="thumbnails border_radius" id="thumbnail3">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Fall Limited Edition Sneakers"
+            />
+          </div>
+          <div class="thumbnails border_radius" id="thumbnail4">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Fall Limited Edition Sneakers"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="lightbox" id="lightbox">
+        <div class="flex_group" id="lightbox_inner">
+          <div class="product_lightbox">
+            <button class="slide-arrow" id="slide-arrow-prev"></button>
+            <button class="slide-arrow" id="slide-arrow-next"></button>
+            <ul class="slides-container" id="slides-container">
+              <li class="slide">
+                <img src="images/image-product-1.jpg" alt="" />
+              </li>
+              <li class="slide">
+                <img src="images/image-product-2.jpg" alt="" />
+              </li>
+              <li class="slide">
+                <img src="images/image-product-3.jpg" alt="" />
+              </li>
+              <li class="slide">
+                <img src="images/image-product-4.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="product_content">
+        <h3>Sneaker Company</h3>
+        <div class="product_title">Fall Limited Edition Sneakers</div>
+        <p class="product_desc">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price_flex_group">
+          <div class="product_price flex_group">
+            <div class="price">$125.00</div>
+            <div class="product_discount">50%</div>
+          </div>
+          <div class="original_price">$250.00</div>
+        </div>
+        <div class="product_quantity">
+          <div class="quantity_main flex_group quantity_border">
+            <button class="quantity_icon" id="product_minus"></button>
+            <span id="quantity_indicator">0</span>
+            <button class="quantity_icon" id="product_plus"></button>
+          </div>
+          <button class="add_cart quantity_border">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="lightbox main_lightbox" id="lightbox">
+      <div class="flex_group" id="lightbox_inner">
+        <div class="product_lightbox">
+          <button class="right_close" id="close_icon"></button>
+          <button class="slide-arrow" id="slide-arrow-prev"></button>
+          <button class="slide-arrow" id="slide-arrow-next"></button>
+          <ul class="slides-container" id="slides-container">
+            <li class="slide">
+              <img class="box_product_main_img" src="images/image-product-1.jpg" alt="" />
+            </li>
+            <li class="slide">
+              <img class="box_product_main_img" src="images/image-product-2.jpg" alt="" />
+            </li>
+            <li class="slide">
+              <img class="box_product_main_img" src="images/image-product-3.jpg" alt="" />
+            </li>
+            <li class="slide">
+              <img class="box_product_main_img" src="images/image-product-4.jpg" alt="" />
+            </li>
+          </ul>
+          <div class="product_lightbox_thumbnails">
+            <div class="product_thumbnails flex_group">
+              <div class="thumbnails border_radius">
+                <img
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt="Fall Limited Edition Sneakers"
+                />
+              </div>
+              <div class="thumbnails border_radius">
+                <img
+                  src="images/image-product-2-thumbnail.jpg"
+                  alt="Fall Limited Edition Sneakers"
+                />
+              </div>
+              <div class="thumbnails border_radius">
+                <img
+                  src="images/image-product-3-thumbnail.jpg"
+                  alt="Fall Limited Edition Sneakers"
+                />
+              </div>
+              <div class="thumbnails border_radius">
+                <img
+                  src="images/image-product-4-thumbnail.jpg"
+                  alt="Fall Limited Edition Sneakers"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
