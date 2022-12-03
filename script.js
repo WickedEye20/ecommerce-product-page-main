@@ -123,6 +123,21 @@ for (let a = 0; a < thumbnail.length; a++) {
   });
 }
 
+// Navbar Active
+let li_select = document.querySelectorAll(".left_flex_group li");
+
+for (let u = 0; u < li_select.length; u++) {
+  li_select[u].addEventListener("click", () => {
+    console.log(u)
+    
+    var nav_active = document.getElementsByClassName("li_active");
+    if (nav_active.length > 0) {
+      nav_active[0].className = nav_active[0].className.replace("li_active", "");
+    }
+    li_select[u].className += "li_active";
+  });
+}
+
 // Carousel
 let slidesContain;
 let light_slide;
