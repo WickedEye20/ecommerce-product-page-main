@@ -712,14 +712,14 @@ header {
     height: 17px;
     border: none;
     background: transparent;
-    background-image: url(images/icon-close.svg);
+    background-image: url(images/icon-nav-close.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     transition: 0.4s ease;
   }
   .menu_close_icon:is(:focus, :hover){
-    background-image: url(images/icons-close-active.svg);
+    background-image: url(images/icon-nav-close-active.svg);
   }
 }
 
